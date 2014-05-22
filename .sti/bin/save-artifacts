@@ -15,7 +15,7 @@ echo '!!!!! TMP !!!!!!!'
 ls -la /tmp/
 
 echo '!!!!! TMP/artif !!!!!!!'
-ls -la /tmp/artifac
+ls -la /tmp/artifacts
 echo '!!!!!!!!///////////////'
 
 popd >/dev/null
