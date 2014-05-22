@@ -11,6 +11,10 @@ if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
   ls -la /tmp/artifacts
   echo '!!!!!!!!!!!!!!!'
 fi
+
+echo 'force taring'
+tar zcf /tmp/artifacts/gems.tgz bundle/ruby src/Gemfile.lock
+
 echo '!!!!! TMP !!!!!!!'
 ls -la /tmp/
 
