@@ -11,5 +11,11 @@ if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
   ls -la /tmp/artifacts
   echo '!!!!!!!!!!!!!!!'
 fi
+echo '!!!!! TMP !!!!!!!'
+ls -la /tmp/
+
+echo '!!!!! TMP/artif !!!!!!!'
+ls -la /tmp/artifac
+echo '!!!!!!!!///////////////'
 
 popd >/dev/null
