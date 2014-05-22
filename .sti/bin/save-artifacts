@@ -2,7 +2,7 @@
 
 echo "---> Saving build-artifactsss"
 
-pushd ${HOME}
+pushd /opt/ruby
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
   echo '111111111111111'
