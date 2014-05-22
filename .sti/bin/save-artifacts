@@ -6,6 +6,7 @@ pushd ${HOME} >/dev/null
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
   tar zcf /tmp/artifacts/gems.tgz bundle/ruby src/Gemfile.lock
+  ls -la /tmp/artifacts
 fi
 
 popd >/dev/null
