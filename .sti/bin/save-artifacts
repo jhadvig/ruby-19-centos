@@ -2,6 +2,8 @@
 
 echo "---> Saving build-artifactsss"
 
+echo $HOME
+echo ${HOME}
 pushd /opt/ruby
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
@@ -15,11 +17,11 @@ fi
 #echo 'force taring'
 #tar zcf /tmp/artifacts/gems.tgz bundle/ruby src/Gemfile.lock
 
-echo '!!!!! TMP !!!!!!!'
-ls -la /tmp/
+#echo '!!!!! TMP !!!!!!!'
+#ls -la /tmp/
 
-echo '!!!!! TMP/artif !!!!!!!'
-ls -la /tmp/artifacts
-echo '!!!!!!!!///////////////'
+#echo '!!!!! TMP/artif !!!!!!!'
+#ls -la /tmp/artifacts
+#echo '!!!!!!!!///////////////'
 
 popd >/dev/null
