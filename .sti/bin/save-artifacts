@@ -2,6 +2,10 @@
 
 echo "---> Saving build-artifactsss"
 
+echo '------------'
+env
+echo '------------'
+
 echo $HOME
 echo ${HOME}
 pushd /opt/ruby
