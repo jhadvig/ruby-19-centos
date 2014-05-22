@@ -17,7 +17,11 @@ function rake_assets_precompile() {
   bundle exec rake assets:precompile
 }
 echo 'listing /tmp/artifacts'
-ls -la /tmp/artifacts
+if [ -d /tmp/artifacts ]; then
+  echo 'exists'
+  ls -la /tmp/artifacts
+fi
+
 if [ -e /tmp/artifacts/gems.tgz ]; then
   echo "Restoring build artifacts"
   pushd ${HOME} >/dev/null
