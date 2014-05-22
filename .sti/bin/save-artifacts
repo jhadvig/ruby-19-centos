@@ -5,6 +5,7 @@ echo "---> Saving build-artifactsss"
 pushd ${HOME} >/dev/null
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
+  echo '111111111111111'
   tar zcf /tmp/artifacts/gems.tgz bundle/ruby src/Gemfile.lock
   echo '!!!!!!!!!!!!!!!'
   ls -la /tmp/artifacts
