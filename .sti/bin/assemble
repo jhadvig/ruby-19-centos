@@ -34,9 +34,12 @@ cp -Rf ${app_src_dir}/* ${app_runtime_dir}/
 pushd "$app_runtime_dir/${APP_ROOT}" >/dev/null
 echo "---> Building your Ruby application from source"
 
+echo `ls -la /opt/ruby/bundle/ruby/1.9.1/gems`
+
 if [ -f Gemfile ]; then
   ADDTL_BUNDLE_ARGS=""
   if [ -f Gemfile.lock ]; then
+    echo "Gemfile.lock found"
     ADDTL_BUNDLE_ARGS="--deployment"
   fi
 
