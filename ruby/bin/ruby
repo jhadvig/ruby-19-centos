@@ -5,5 +5,5 @@
 #
 # #!/usr/bin/ruby
 #
-[ -f ${HOME}/.bashrc ] && source ${HOME}/.bashrc
+[ -f ${STI_HOME}/.bashrc ] && source ${STI_HOME}/.bashrc
 exec ruby $@

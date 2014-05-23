@@ -48,8 +48,8 @@ RUN mkdir -p /opt/ruby/{gems,run,src} && \
 # GIT repository. The default value is the root folder.
 #
 ENV APP_ROOT .
-ENV HOME     /opt/ruby
-ENV PATH     $HOME/bin:$PATH
+ENV STI_HOME     /opt/ruby
+ENV PATH     $STI_HOME/bin:$PATH
 
 WORKDIR     /opt/ruby/src
 USER ruby

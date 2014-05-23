@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-[ -f ${HOME}/.bashrc ] && source ${HOME}/.bashrc
+[ -f ${STI_HOME}/.bashrc ] && source ${STI_HOME}/.bashrc
 
 function is_puma_installed() {
   [ ! -f Gemfile.lock ] && return 1
@@ -10,7 +10,7 @@ function is_puma_installed() {
 # The app_root_dir needs to be exported, so the Puma or other Ruby
 # application server can pick it up and use it as 'application root'
 #
-export app_root_dir="${HOME}/src/${APP_ROOT:-.}"
+export app_root_dir="${STI_HOME}/src/${APP_ROOT:-.}"
 
 export RACK_ENV=${RACK_ENV:-"production"}
 export RAILS_ENV=${RAILS_ENV:-"${RACK_ENV}"}
@@ -23,8 +23,8 @@ cd $app_root_dir
 [ "$1" == "--debug" ] && exec /bin/bash
 
 if is_puma_installed; then
-  exec bundle exec "puma --config ${HOME}/etc/puma.cfg"
+  exec bundle exec "puma --config ${STI_HOME}/etc/puma.cfg"
 else
   echo "You might consider adding 'puma' into your Gemfile."
-  exec bundle exec "rackup -P ${HOME}/run/rack.pid --host 0.0.0.0"
+  exec bundle exec "rackup -P ${STI_HOME}/run/rack.pid --host 0.0.0.0"
 fi
