@@ -6,8 +6,8 @@ echo '------------'
 env
 echo '------------'
 
-echo $HOME
-echo ${HOME}
+echo $STI_HOME
+echo ${STI_HOME}
 pushd /opt/ruby
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then

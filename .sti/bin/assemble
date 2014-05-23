@@ -3,7 +3,7 @@
 # Default STI assemble script for the 'centos-ruby' image.
 #
 
-[ -f ${HOME}/.bashrc ] && source ${HOME}/.bashrc
+[ -f ${STI_HOME}/.bashrc ] && source ${STI_HOME}/.bashrc
 
 function rake_assets_precompile() {
   [ -f .sti/markers/disable_asset_compilation ] && return
@@ -24,12 +24,12 @@ fi
 
 if [ -e /tmp/artifacts/gems.tgz ]; then
   echo "Restoring build artifacts"
-  pushd ${HOME} >/dev/null
+  pushd ${STI_HOME} >/dev/null
   tar zxf /tmp/artifacts/gems.tgz
   popd >/dev/null
 fi
 
-app_runtime_dir="${HOME}/src"
+app_runtime_dir="${STI_HOME}/src"
 app_src_dir="/tmp/src"
 
 echo "---> Installing application source"
@@ -60,7 +60,7 @@ if [ -f Gemfile ]; then
   # from console (ctrl+c)
   #
   echo "---> Running 'bundle install ${ADDTL_BUNDLE_ARGS}'"
-  bundle install --path ${HOME}/bundle ${ADDTL_BUNDLE_ARGS}
+  bundle install --path ${STI_HOME}/bundle ${ADDTL_BUNDLE_ARGS}
 
   echo "---> Cleaning up unused ruby gems"
   bundle clean -V
