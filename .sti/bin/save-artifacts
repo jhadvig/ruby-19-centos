@@ -9,7 +9,7 @@ echo '------------'
 echo '////////////'
 echo $STI_HOME
 echo ${STI_HOME}
-ecoh '////////////'
+echo '////////////'
 pushd /opt/ruby
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
