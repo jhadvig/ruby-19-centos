@@ -27,7 +27,7 @@ RUN yum install --assumeyes centos-release-SCL && ( \
 #
 ADD ./ruby /opt/ruby/
 
-ENV STI_SCRIPTS_URL https://raw.githubusercontent.com/openshift/ruby-19-centos/master/.sti/bin
+ENV STI_SCRIPTS_URL https://raw.githubusercontent.com/jhadvig/ruby-19-centos/user_shell/.sti/bin
 
 # Create 'ruby' account we will use to run Ruby application
 # Add support for '#!/usr/bin/ruby' shebang.

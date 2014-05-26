@@ -2,6 +2,10 @@
 
 echo "---> Saving build-artifacts"
 
+echo "!!!!!!!!!!!!"
+env
+echo "!!!!!!!!!!!!"
+
 pushd ${HOME} >/dev/null
 
 if [ -d ./bundle/ruby -a -f ./src/Gemfile.lock ]; then
